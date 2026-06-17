@@ -1,5 +1,12 @@
 import pandas as pd
 from pathlib import Path
+import sys
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+sys.path.append(str(BASE_DIR))
+
 from neo4j_client import driver
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -60,7 +67,7 @@ def import_locations():
 
     print("Locations imported successfully")
 
-    def import_nodes():
+def import_nodes():
     pass
 
 
@@ -79,7 +86,7 @@ def import_olt_to_router():
 def import_child_parent():
     pass
 
-    def main():
+def main():
 
     import_locations()
 
@@ -92,7 +99,6 @@ def import_child_parent():
     import_olt_to_router()
 
     import_child_parent()
-
 
 if __name__ == "__main__":
     main()
